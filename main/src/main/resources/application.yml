@@ -1,0 +1,11 @@
+quarkus:
+  application:
+    name: quickstart
+#  native:
+#    enabled: true
+  package:
+    jar:
+      type: fast-jar
+  jackson:
+    fail-on-unknown-properties: false
+    fail-on-empty-beans: true
