@@ -14,18 +14,14 @@ class GreetingResourceTest {
 
     @Test
     fun testHelloEndpoint() {
-        val response = Given {
+        Given {
             body(UserToCreateInputDTO(name = "Enrico", email = "enrico@gmail.com"))
             contentType("application/json")
         } When {
             post("/users")
         } Then {
             statusCode(200)
-            body(
-                "name", equalTo("Enrico"),
-            )
-        } Extract {
-            path<String>("name")
-        }
+            body("name", equalTo("Enrico"))
+        } Extract { path<String>("name") }
     }
 }

@@ -1,7 +1,9 @@
 quarkus:
   application:
     name: quickstart
-#  native:
+  live-reload:
+    instrumentation: true
+  #  native:
 #    enabled: true
   package:
     jar:

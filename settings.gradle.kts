@@ -3,8 +3,13 @@ rootProject.name ="kotlin-quarkus-quickstart"
 include("main", "domain", "rest-server")
 include("domain")
 include("rest-server")
+include("kafka-producer")
 
+// PRIMARY
 project(":rest-server").projectDir = file("primary/rest-server")
+
+// SECONDARY
+project(":kafka-producer").projectDir = file("secondary/kafka-producer")
 
 pluginManagement {
     val quarkusPluginVersion: String by settings

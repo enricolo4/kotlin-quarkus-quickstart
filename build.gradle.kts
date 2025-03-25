@@ -30,10 +30,7 @@ allprojects {
 
     dependencies {
         implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
-//        implementation("io.quarkus:quarkus-messaging")
 
-//        implementation("io.quarkus:quarkus-hibernate-orm-panache-kotlin")
-//        implementation("io.quarkus:quarkus-confluent-registry-avro")
         implementation("io.quarkus:quarkus-kotlin")
         implementation("io.quarkus:quarkus-config-yaml")
 //        implementation("io.quarkus:quarkus-hibernate-orm-panache")
