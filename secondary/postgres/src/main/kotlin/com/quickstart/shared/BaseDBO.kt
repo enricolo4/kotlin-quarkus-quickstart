@@ -10,11 +10,6 @@ import org.hibernate.annotations.UpdateTimestamp
 
 @MappedSuperclass
 abstract class BaseDBO {
-    @Id
-    @Tsid
-    @Column
-    var id: Long? = null
-
     @CreationTimestamp
     lateinit var createdAt: LocalDateTime
 

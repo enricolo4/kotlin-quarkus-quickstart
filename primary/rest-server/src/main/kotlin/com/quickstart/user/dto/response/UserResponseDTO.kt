@@ -13,7 +13,9 @@ data class UserResponseDTO(
     val id: Long,
     val name: String,
     val email: String,
-    val cpf: String
+    val cpf: String,
+    val address: UserAddressResponseDTO,
+    val phone: UserPhoneResponseDTO
 )
 
 fun List<User>.toUsersResponse() = UsersResponseDTO(
@@ -35,5 +37,7 @@ private fun User.toUserResponseDTO() = UserResponseDTO(
     id = id,
     name = name,
     email = email,
-    cpf = cpf
+    cpf = cpf,
+    address = address.toResponseDTO(),
+    phone = phone.toResponseDTO()
 )
