@@ -1,5 +1,5 @@
-private val primary = listOf(":rest-server")
-private val secondary = listOf(":kafka-producer")
+private val primary = listOf(":rest-server", ":kafka-consumer")
+private val secondary = listOf(":kafka-producer", ":postgres")
 private val projects = listOf(":domain") + primary + secondary
 
 dependencies {

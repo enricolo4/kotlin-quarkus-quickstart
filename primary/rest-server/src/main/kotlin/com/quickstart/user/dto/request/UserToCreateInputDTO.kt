@@ -4,10 +4,12 @@ import com.quickstart.user.model.UserToCreate
 
 data class UserToCreateInputDTO(
     val name: String,
-    val email: String
+    val email: String,
+    val cpf: String
 ) {
     fun toModel() = UserToCreate(
         name = name,
-        email = email
+        email = email,
+        cpf = cpf
     )
 }

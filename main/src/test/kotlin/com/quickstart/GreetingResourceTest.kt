@@ -15,7 +15,7 @@ class GreetingResourceTest {
     @Test
     fun testHelloEndpoint() {
         Given {
-            body(UserToCreateInputDTO(name = "Enrico", email = "enrico@gmail.com"))
+            body(UserToCreateInputDTO(name = "Enrico", email = "enrico@gmail.com", cpf = "343495668-99"))
             contentType("application/json")
         } When {
             post("/users")

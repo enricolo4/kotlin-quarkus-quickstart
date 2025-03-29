@@ -1,15 +1,16 @@
 rootProject.name ="kotlin-quarkus-quickstart"
 
-include("main", "domain", "rest-server")
-include("domain")
-include("rest-server")
-include("kafka-producer")
+include("main", "domain")
+include("rest-server", "kafka-consumer")
+include("kafka-producer", "postgres")
 
 // PRIMARY
 project(":rest-server").projectDir = file("primary/rest-server")
+project(":kafka-consumer").projectDir = file("primary/kafka-consumer")
 
 // SECONDARY
 project(":kafka-producer").projectDir = file("secondary/kafka-producer")
+project(":postgres").projectDir = file("secondary/postgres")
 
 pluginManagement {
     val quarkusPluginVersion: String by settings

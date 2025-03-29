@@ -33,13 +33,8 @@ allprojects {
 
         implementation("io.quarkus:quarkus-kotlin")
         implementation("io.quarkus:quarkus-config-yaml")
-//        implementation("io.quarkus:quarkus-hibernate-orm-panache")
-//        implementation("io.quarkus:quarkus-avro")
-//        implementation("io.quarkiverse.kafkastreamsprocessor:quarkus-kafka-streams-processor:4.0.3")
-//        implementation("io.quarkus:quarkus-jdbc-postgresql")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         implementation("io.quarkus:quarkus-arc")
-//        implementation("io.quarkus:quarkus-hibernate-orm")
         testImplementation("io.quarkus:quarkus-junit5")
         testImplementation("io.rest-assured:rest-assured")
         testImplementation("io.rest-assured:kotlin-extensions")

@@ -11,3 +11,15 @@ quarkus:
   jackson:
     fail-on-unknown-properties: false
     fail-on-empty-beans: true
+  datasource:
+    db-kind: postgresql
+    username: test
+    password: test
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/test
+  hibernate-orm:
+    physical-naming-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+  flyway:
+    migrate-at-start: true
+    baseline-on-migrate: true
